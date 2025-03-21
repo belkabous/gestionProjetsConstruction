@@ -7,7 +7,6 @@ import java.sql.DriverManager;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.util.ArrayList;
-import java.util.Date;
 import java.util.List;
 
 public class TacheDao {
@@ -43,6 +42,7 @@ public class TacheDao {
         try(PreparedStatement ps = conn.prepareStatement(sql); ResultSet result = ps.executeQuery()){
             while(result.next()){
                 Tache tache = new Tache();
+                tache.setIdT(result.getInt("idT"));
                 tache.setNomT(result.getString("nomT"));
                 tache.setDescriptionT(result.getString("descriptionT"));
                 tache.setDateDebutT(result.getString("dateDebutT"));
@@ -58,11 +58,13 @@ public class TacheDao {
 
     public Tache getTacheById(int idT){
         Tache tache = null;
-        String sql = "select * from projet where idT = ?";
-        try(PreparedStatement ps = conn.prepareStatement(sql); ResultSet result= ps.executeQuery()){
+        String sql = "select * from tache where idT = ?";
+        try(PreparedStatement ps = conn.prepareStatement(sql)){
             ps.setInt(1,idT);
+            ResultSet result= ps.executeQuery();
             while(result.next()){
                 tache = new Tache();
+                tache.setIdT(result.getInt("idT"));
                 tache.setNomT(result.getString("nomT"));
                 tache.setDescriptionT(result.getString("descriptionT"));
                 tache.setDateDebutT(result.getString("dateDebutT"));

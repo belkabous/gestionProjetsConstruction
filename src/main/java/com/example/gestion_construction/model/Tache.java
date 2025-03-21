@@ -19,6 +19,13 @@ public class Tache {
         this.dateFinT = dateFinT;
     }
 
+    public Tache(String nomT, String descriptionT, String dateDebutT, String dateFinT) {
+        this.nomT = nomT;
+        this.descriptionT = descriptionT;
+        this.dateDebutT = dateDebutT;
+        this.dateFinT = dateFinT;
+    }
+
     public int getIdT() {
         return idT;
     }

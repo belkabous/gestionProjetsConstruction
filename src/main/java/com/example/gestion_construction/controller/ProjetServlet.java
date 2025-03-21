@@ -9,7 +9,6 @@ import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpServletResponse;
 
 import java.io.IOException;
-import java.util.Date;
 import java.util.List;
 
 @WebServlet("/ProjetServlet")
@@ -34,9 +33,7 @@ public class ProjetServlet extends HttpServlet {
 
     @Override
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
-
         String action = req.getParameter("action");
-
         if (action.equals("all-projects")){
             getProjects(req,resp);
         } else if (action.equals("delete-projet")){
@@ -50,11 +47,9 @@ public class ProjetServlet extends HttpServlet {
             req.getRequestDispatcher("editProjet.jsp").forward(req, resp);
         }
 
-
     }
 
     private void editProjet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
-
         int idP=Integer.parseInt(req.getParameter("idP"));
        String nomP = req.getParameter("nomP");
        String descriptionP = req.getParameter("descriptionP");

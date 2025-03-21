@@ -16,6 +16,13 @@ public class Ressource {
         this.quantite = quantite;
     }
 
+    public Ressource(String nomR, String type, float quantite) {
+        this.nomR = nomR;
+        this.type = type;
+        this.quantite = quantite;
+    }
+
+
     public int getIdR() {
         return idR;
     }

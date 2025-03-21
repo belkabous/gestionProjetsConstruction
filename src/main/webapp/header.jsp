@@ -51,13 +51,13 @@
                             <a class="nav-link" href="about.jsp"> About</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="projetForm.jsp"> Ajout des projets </a>
+                            <a class="nav-link" href="ressource-servlet?action=all-ressources"> Liste des ressources </a>
                         </li>
                         <li class="nav-item">
                             <a class="nav-link" href="ProjetServlet?action=all-projects"> Liste des projet </a>
                         </li>
                         <li class="nav-item active">
-                            <a class="nav-link" href="testimonial.jsp">Testimonial</a>
+                            <a class="nav-link" href="tache-servlet?action=all-taches">Liste des taches</a>
                         </li>
                     </ul>
                 </div>

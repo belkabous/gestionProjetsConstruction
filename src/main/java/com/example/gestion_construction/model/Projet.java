@@ -28,6 +28,7 @@ public class Projet {
         this.budget = budget;
     }
 
+
     public int getIdP() {
         return idP;
     }

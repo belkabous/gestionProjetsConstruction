@@ -40,6 +40,7 @@ public class RessourceDao {
         try(PreparedStatement ps = conn.prepareStatement(sql); ResultSet result = ps.executeQuery()){
             while(result.next()){
                 Ressource ressource = new Ressource();
+                ressource.setIdR(result.getInt("idR"));
                 ressource.setNomR(result.getString("nomR"));
                 ressource.setType(result.getString("type"));
                 ressource.setQuantite(result.getFloat("quantite"));
@@ -54,10 +55,12 @@ public class RessourceDao {
     public Ressource getRessourceById(int idR){
         Ressource ressource = null;
         String sql = "select * from ressource where idR = ?";
-        try(PreparedStatement ps = conn.prepareStatement(sql); ResultSet result = ps.executeQuery()){
+        try(PreparedStatement ps = conn.prepareStatement(sql)){
             ps.setInt(1, idR);
+            ResultSet result = ps.executeQuery();
             while(result.next()){
                 ressource = new Ressource();
+                ressource.setIdR(result.getInt("idR"));
                 ressource.setNomR(result.getString("nomR"));
                 ressource.setType(result.getString("type"));
                 ressource.setQuantite(result.getFloat("quantite"));
@@ -74,7 +77,7 @@ public class RessourceDao {
             ps.setString(1, ressource.getNomR());
             ps.setString(2, ressource.getType());
             ps.setFloat(3, ressource.getQuantite());
-            ps.setInt(6,ressource.getIdR());
+            ps.setInt(4,ressource.getIdR());
             ps.executeUpdate();
 
         }catch (Exception e){
