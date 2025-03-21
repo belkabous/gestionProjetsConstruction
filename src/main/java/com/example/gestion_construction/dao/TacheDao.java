@@ -48,7 +48,6 @@ public class TacheDao {
                 tache.setDateDebutT(result.getString("dateDebutT"));
                 tache.setDateFinT(result.getString("dateFinT"));
                 listTaches.add(tache);
-
             }
         } catch (Exception e) {
             e.printStackTrace();
@@ -84,7 +83,7 @@ public class TacheDao {
             ps.setString(2,tache.getDescriptionT());
             ps.setString(3,tache.getDateDebutT());
             ps.setString(4,tache.getDateFinT());
-            ps.setInt(6,tache.getIdT());
+            ps.setInt(5,tache.getIdT());
             ps.executeUpdate();
 
         } catch (Exception e) {
