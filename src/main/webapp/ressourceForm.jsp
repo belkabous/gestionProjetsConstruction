@@ -20,7 +20,7 @@
 
 <div class="container mt-5">
     <h2>Ajouter</h2>
-    <form action="ressource-servlet" method="post">
+    <form action="ressource-servlet?action=insert-ressource" method="post">
         <div class="form-group">
             <label for="nomR">Nom du ressource</label>
             <input type="text" class="form-control" id="nomR" name="nomR" required>
@@ -34,7 +34,6 @@
             <input type="number" class="form-control" id="quantite" name="quantite" required>
         </div>
         <button type="submit" class="btn btn-primary">Enregistrer</button>
-        <input type="hidden"  id="insert-ressource" name="action" required>
 
     </form>
     <hr>

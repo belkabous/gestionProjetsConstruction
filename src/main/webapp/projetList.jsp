@@ -65,9 +65,9 @@
     <td><%= projet.getDateFinP() %></td>
     <td><%= projet.getBudget() %></td>
     <td>
-      <a href="ProjetServlet?action=delete-projet&idP=<%= projet.getIdP() %>" class="btn btn-danger">Supprimer</a>
-      <a href="ProjetServlet?action=edit-projet&idP=<%= projet.getIdP()%>" class="btn btn-dark">Modifier</a>
-    </td>
+      <a href="ProjetServlet?action=delete-projet&idP=<%= projet.getIdP() %>" class="btn btn-danger" onclick="return confirm('Are you sure?')">Supprimer</a>
+        <a href="ProjetServlet?action=edit-projet&idP=<%= projet.getIdP()%>" class="btn btn-dark">Modifier</a>
+      </td>
   </tr>
   <%
     }

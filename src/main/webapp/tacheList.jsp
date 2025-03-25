@@ -52,7 +52,7 @@
         <td><%= tache.getDateDebutT() %></td>
         <td><%= tache.getDateFinT() %></td>
         <td>
-            <a href="tache-servlet?action=delete-tache&idT=<%= tache.getIdT() %>" class="btn btn-danger">Supprimer</a>
+            <a href="tache-servlet?action=delete-tache&idT=<%= tache.getIdT() %>" class="btn btn-danger" >Supprimer</a>
             <a href="tache-servlet?action=edit-tache&idT=<%= tache.getIdT()%>" class="btn btn-dark">Modifier</a>
         </td>
     </tr>

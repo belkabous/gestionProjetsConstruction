@@ -21,7 +21,7 @@
     <jsp:include page="header.jsp"/>
 </div>
 
-<h2>Liste des Projets</h2>
+<h2>Liste des ressources</h2>
 <a href="ressource-servlet?action=ajouter-ressource" class="btn btn-primary">Ajouter</a>
 <table class="table">
     <thead>
